@@ -22,7 +22,7 @@ int findDivisor(int a, int b)
     int q = a / b;
     int r = a - (b * q);
     if(a == (b * q + r)) {
-        return euclideanAlg(b, r);
+        return findDivisor(b, r);
     }
     return 1;
 }
